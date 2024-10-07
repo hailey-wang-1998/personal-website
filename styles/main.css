@@ -1,10 +1,10 @@
-html,body{
-  font-family:"Figtree", serif; 
+html, body {
+  font-family: "Figtree", serif; 
   font-size: 16px;
   color: #383838;
   width: 80%;
-  margin:auto;
-  background-color:antiquewhite;
+  margin: auto;
+  background-color: antiquewhite;
 }
 
 .nav-container {
@@ -14,7 +14,7 @@ html,body{
   border-bottom: 1px solid gray;
 }
 
-.nav-container h1{
+.nav-container h1 {
   font-size: 3rem;
   font-family: "Lemon", serif;
 }
@@ -32,7 +32,7 @@ html,body{
   margin-top: 2rem;
 }
 
-.main{
+.main {
   padding: 1rem 23rem 2rem 2rem;
 }
 
@@ -64,19 +64,20 @@ html,body{
   overflow: hidden;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  height: 350px;
+  /* 刪除固定高度，讓內容自動調整 */
   padding-top: 0.5rem;
+  display: flex; /* 使項目可自動擴展 */
+  flex-direction: column; /* 讓項目內部元素垂直排列 */
 }
 
 .project-content {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  align-items:  flex-start;
+  align-items: flex-start;
   padding: 0.5rem;
   flex-grow: 1;
 }
-
 
 .project img {
   display: block; 
@@ -87,19 +88,24 @@ html,body{
   margin: 0 auto; /* 居中圖片 */
 }
 
-
-
 .project h3 {
-  font-family:"Figtree", serif;
+  font-family: "Figtree", serif;
   font-size: 1.5rem;
   margin: 1rem;
 }
 
 .project p {
-  font-family:"Figtree", serif;
+  font-family: "Figtree", serif;
   margin: 0 1rem 1rem 1rem;
   font-size: 1rem;
   color: #555;
+}
+
+.project time {
+  font-family: "Figtree", serif;
+  margin: 0 1rem 1rem 1rem;
+  font-size: 0.9rem; /* 調整時間行的字體大小 */
+  color: #999; /* 調整時間行的顏色以增強可讀性 */
 }
 
 .project:hover {
@@ -107,29 +113,10 @@ html,body{
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.link{
+.link {
   text-decoration: none;
   color: inherit;
-}
-
-.link {
   position: relative; /* Ensure that the pseudo-element is positioned relative to the link */
-  text-decoration: none; /* Remove underline from links */
-  color: inherit; /* Inherit text color */
-}
-
-.link {
-  position: relative; /* Make the link's position relative */
-  color: inherit; /* Ensure text color is inherited */
-  text-decoration: none; /* Remove the default underline */
-  transition: color 0.3s ease; /* Smooth transition for text color */
-}
-
-
-.link {
-  position: relative; /* Make the link's position relative */
-  color: inherit; /* Ensure text color is inherited */
-  text-decoration: none; /* Remove the default underline */
   transition: background-color 0.3s ease; /* Smooth transition for background color */
 }
 
@@ -147,3 +134,72 @@ html,body{
   color: grey;
 }
 
+/* 預設樣式 (桌面版) */
+body {
+  font-family: 'Figtree', sans-serif;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.main {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* 平板 (768px 到 1024px) */
+@media screen and (max-width: 1024px) {
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .navlinks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .main {
+    padding: 0 20px;
+  }
+}
+
+/* 手機 (小於 768px) */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  .nav-container {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+  }
+  
+  .navlinks {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main {
+    text-align: center;
+    padding: 0 15px;
+  }
+  
+  .projects-container {
+    grid-template-columns: 1fr; /* 確保在小屏幕上使用單列顯示 */
+  }
+  
+  .project {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .footer {
+    text-align: center;
+  }
+}
