@@ -1,205 +1,1466 @@
-html, body {
-  font-family: "Figtree", serif; 
-  font-size: 16px;
-  color: #383838;
-  width: 80%;
-  margin: auto;
-  background-color: antiquewhite;
+:root {
+  --background: #f6e7d2;
+  --text: #303030;
+
+  /* slightly deeper soft pink */
+  --accent: #e9adb6;
+
+  --sky: #cce6ee;
+
+  --grass: #a9c991;
+  --grass-hover: #a6c68c;
+
+  --stem: #58754f;
+  --leaf: #67885a;
+
+  --border: rgba(48, 48, 48, 0.3);
 }
 
-.nav-container {
+
+* {
+  box-sizing: border-box;
+}
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+body {
+  margin: 0;
+
+  background: var(--background);
+
+  color: var(--text);
+
+  font-family: "Figtree", sans-serif;
+
+  font-size: 18px;
+
+  line-height: 1.35;
+}
+
+
+img {
+  display: block;
+  width: 100%;
+}
+
+
+a {
+  color: inherit;
+
+  text-decoration-thickness: 2px;
+  text-underline-offset: 3px;
+
+  text-decoration-color: var(--accent);
+}
+
+
+button {
+  font-family: inherit;
+}
+
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.site-header {
+  width: calc(100% - 72px);
+
+  margin: 0 auto;
+
+  padding: 20px 0 16px;
+
   display: flex;
-  align-items: center;
-  padding: 1rem 2rem 0rem 2rem;
-  border-bottom: 1px solid gray;
+
+  justify-content: space-between;
+
+  align-items: flex-start;
+
+  border-bottom: 1px solid var(--border);
 }
 
-.nav-container h1 {
-  font-size: 3rem;
+
+.site-name {
   font-family: "Lemon", serif;
+
+  font-size: clamp(34px, 3vw, 44px);
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  text-decoration: none;
 }
 
-.nav-container nav {
-  font-size: 1.2rem;
-  margin-left: auto;
-}
 
-.navlinks {
-  list-style: none; 
+.nav {
   display: flex;
-  gap: 1.5rem; 
-  padding: 0;
-  margin-top: 2rem;
+
+  gap: 34px;
+
+  padding-top: 8px;
 }
 
-.main {
-  padding: 1rem 23rem 2rem 2rem;
+
+.nav a {
+  font-size: 21px;
+
+  text-decoration: none;
 }
 
-.underline {
-  text-decoration: underline 1.5px olive;
+
+.nav a:hover {
+  text-decoration: underline;
+
+  text-decoration-color: var(--accent);
+
+  text-decoration-thickness: 4px;
 }
 
-.graphics {
-  font-family: "Lemon", serif;
-  padding: 0rem 2rem 2rem 2rem; 
-}
 
-.narratives {
-  font-family: "Lemon", serif;
-  padding: 0rem 2rem 2rem 2rem; 
-}
 
-.projects-container {
+/* =====================================
+   HERO
+===================================== */
+
+.hero {
+  /*
+    SAME WIDTH AS .site-header
+    This makes the H in Hailey and
+    H in Hello line up exactly.
+  */
+  width: calc(100% - 72px);
+
+  max-width: none;
+
+  margin: 0 auto;
+
+  padding: 32px 0 55px;
+
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 1rem;
+
+  grid-template-columns:
+    minmax(330px, 500px)
+    minmax(420px, 1fr);
+
+  gap: 8vw;
+
+  align-items: start;
 }
+
+
+.intro {
+  max-width: 500px;
+}
+
+
+.intro p {
+  margin: 0 0 20px;
+}
+
+
+.intro-lede {
+  font-size: inherit;
+}
+
+
+.intro a {
+  text-decoration-color: var(--accent);
+}
+
+
+.view-projects {
+  display: inline-block;
+
+  margin-top: 12px;
+
+  font-size: 19px;
+
+  text-decoration-thickness: 3px;
+
+  text-decoration-color: var(--accent);
+}
+
+
+
+/* =====================================
+   GARDEN HEADER
+===================================== */
+
+.garden-wrapper {
+  width: 92%;
+
+  max-width: 625px;
+}
+
+
+.garden-heading {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 25px;
+
+  margin-bottom: 10px;
+}
+
+
+.garden-title {
+  margin: 0;
+
+  font-family: "Figtree", sans-serif;
+
+  font-size: 18px;
+
+  font-weight: 400;
+
+  line-height: 1.35;
+}
+
+
+.clear-garden {
+  flex-shrink: 0;
+
+  padding: 0;
+
+  border: 0;
+
+  background: transparent;
+
+  color: var(--text);
+
+  font-size: 12px;
+
+  cursor: pointer;
+
+  text-decoration: underline;
+
+  text-decoration-color: var(--accent);
+
+  text-underline-offset: 3px;
+
+  opacity: 0.55;
+}
+
+
+.clear-garden:hover {
+  opacity: 1;
+}
+
+
+
+/* =====================================
+   GARDEN
+===================================== */
+
+.garden {
+  position: relative;
+
+  width: 100%;
+
+  height: 300px;
+
+  overflow: hidden;
+
+  border: 1px solid rgba(48, 48, 48, 0.35);
+
+  border-radius: 2px;
+
+  background: var(--sky);
+}
+
+
+
+/* =====================================
+   SKY
+===================================== */
+
+.garden-sky {
+  position: absolute;
+
+  top: 0;
+  left: 0;
+  right: 0;
+
+  height: 48%;
+
+  z-index: 1;
+
+  background: var(--sky);
+
+  pointer-events: none;
+}
+
+
+
+/* =====================================
+   CLOUDS
+===================================== */
+
+.cloud {
+  position: absolute;
+
+  width: 50px;
+  height: 14px;
+
+  border-radius: 30px;
+
+  background: rgba(255, 255, 255, 0.72);
+}
+
+
+.cloud::before,
+.cloud::after {
+  content: "";
+
+  position: absolute;
+
+  border-radius: 50%;
+
+  background: inherit;
+}
+
+
+.cloud::before {
+  width: 21px;
+  height: 21px;
+
+  left: 8px;
+  top: -8px;
+}
+
+
+.cloud::after {
+  width: 26px;
+  height: 26px;
+
+  right: 7px;
+  top: -12px;
+}
+
+
+.cloud-one {
+  top: 50px;
+  left: 82px;
+}
+
+
+.cloud-two {
+  top: 88px;
+  left: 275px;
+
+  transform: scale(0.72);
+}
+
+
+.cloud-three {
+  top: 34px;
+  right: 145px;
+
+  transform: scale(0.85);
+}
+
+
+.cloud-four {
+  top: 100px;
+  right: 55px;
+
+  transform: scale(0.6);
+}
+
+
+
+/* =====================================
+   GRASS FIELD
+===================================== */
+
+.grass-field {
+  position: absolute;
+
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  height: 52%;
+
+  z-index: 2;
+
+  background: var(--grass);
+
+  overflow: visible;
+
+  cursor: crosshair;
+}
+
+
+.grass-field:hover {
+  background: var(--grass-hover);
+}
+
+
+
+/* =====================================
+   GRASS TEXTURE
+===================================== */
+
+.grass-texture {
+  position: absolute;
+
+  left: 4%;
+
+  width: 100%;
+
+  z-index: 1;
+
+  color: rgba(72, 105, 61, 0.23);
+
+  font-size: 14px;
+
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  word-spacing: 8px;
+
+  pointer-events: none;
+
+  user-select: none;
+}
+
+
+.texture-one {
+  top: 15%;
+}
+
+
+.texture-two {
+  top: 45%;
+
+  left: 9%;
+
+  font-size: 12px;
+}
+
+
+.texture-three {
+  top: 73%;
+
+  left: 1%;
+
+  font-size: 13px;
+}
+
+
+
+/* =====================================
+   INSTRUCTION
+===================================== */
+
+.garden-instruction {
+  position: absolute;
+
+  left: 50%;
+  top: 50%;
+
+  z-index: 2;
+
+  transform: translate(-50%, -50%);
+
+  margin: 0;
+
+  color: rgba(48, 48, 48, 0.5);
+
+  font-size: 13px;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+
+
+/* =====================================
+   PICKER
+===================================== */
+
+.flower-picker {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 9px;
+
+  padding: 9px 12px;
+
+  border: 1px solid rgba(48, 48, 48, 0.2);
+}
+
+
+.flower-picker p {
+  margin: 0;
+
+  font-size: 12px;
+}
+
+
+.flower-options {
+  display: flex;
+
+  gap: 8px;
+}
+
+
+.plant-option {
+  width: 42px;
+  height: 42px;
+
+  padding: 0;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  border: 1px solid transparent;
+
+  border-radius: 50%;
+
+  background: transparent;
+
+  cursor: pointer;
+
+  font-size: 26px;
+
+  line-height: 1;
+
+  transition:
+    transform 0.15s ease,
+    background 0.15s ease,
+    border-color 0.15s ease;
+}
+
+
+.plant-option:hover {
+  transform: scale(1.12);
+
+  background: rgba(255, 255, 255, 0.25);
+}
+
+
+.plant-option.selected {
+  background: rgba(255, 255, 255, 0.5);
+
+  border-color: rgba(48, 48, 48, 0.35);
+}
+
+
+
+/* =====================================
+   BASE PLANTED ITEM
+===================================== */
+
+.planted-item {
+  position: absolute;
+
+  z-index: 20;
+
+  width: 50px;
+  height: 82px;
+
+  pointer-events: none;
+
+  transform:
+    translate(-50%, -100%)
+    scale(0);
+
+  transform-origin: bottom center;
+
+  animation: plant-grow 0.4s ease forwards;
+}
+
+
+.planted-item.no-animation {
+  animation: none;
+
+  transform:
+    translate(-50%, -100%)
+    scale(0.5);
+}
+
+
+@keyframes plant-grow {
+
+  0% {
+    transform:
+      translate(-50%, -100%)
+      scaleY(0.03)
+      scaleX(0.2);
+  }
+
+  70% {
+    transform:
+      translate(-50%, -100%)
+      scaleY(0.56)
+      scaleX(0.48);
+  }
+
+  100% {
+    transform:
+      translate(-50%, -100%)
+      scale(0.5);
+  }
+
+}
+
+
+
+/* =====================================
+   COMMON STEM + LEAF
+===================================== */
+
+.stem {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 3px;
+
+  transform: translateX(-50%);
+
+  background: var(--stem);
+
+  border-radius: 5px;
+}
+
+
+.leaf {
+  position: absolute;
+
+  background: var(--leaf);
+}
+
+
+
+/* =====================================
+   SUNFLOWER
+===================================== */
+
+.sunflower .stem {
+  height: 52px;
+}
+
+
+.sunflower .leaf {
+  width: 19px;
+  height: 10px;
+
+  border-radius: 100% 0 100% 0;
+}
+
+
+.sunflower .leaf-left {
+  left: 7px;
+  bottom: 20px;
+
+  transform: rotate(24deg);
+}
+
+
+.sunflower .leaf-right {
+  right: 6px;
+  bottom: 31px;
+
+  transform:
+    scaleX(-1)
+    rotate(20deg);
+}
+
+
+.sunflower-head {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 40px;
+  height: 40px;
+
+  transform: translateX(-50%);
+}
+
+
+.sunflower-petal {
+  position: absolute;
+
+  left: 14px;
+  top: 1px;
+
+  width: 12px;
+  height: 24px;
+
+  background: #e1b73c;
+
+  border-radius: 60% 60% 50% 50%;
+
+  transform-origin: 6px 19px;
+}
+
+
+.sunflower-petal:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.sunflower-petal:nth-child(2) {
+  transform: rotate(45deg);
+}
+
+.sunflower-petal:nth-child(3) {
+  transform: rotate(90deg);
+}
+
+.sunflower-petal:nth-child(4) {
+  transform: rotate(135deg);
+}
+
+.sunflower-petal:nth-child(5) {
+  transform: rotate(180deg);
+}
+
+.sunflower-petal:nth-child(6) {
+  transform: rotate(225deg);
+}
+
+.sunflower-petal:nth-child(7) {
+  transform: rotate(270deg);
+}
+
+.sunflower-petal:nth-child(8) {
+  transform: rotate(315deg);
+}
+
+
+.sunflower-center {
+  position: absolute;
+
+  z-index: 3;
+
+  left: 50%;
+  top: 50%;
+
+  width: 15px;
+  height: 15px;
+
+  transform: translate(-50%, -50%);
+
+  border-radius: 50%;
+
+  background: #705039;
+}
+
+
+
+/* =====================================
+   TULIP
+===================================== */
+
+.tulip .stem {
+  height: 53px;
+}
+
+
+.tulip .leaf {
+  bottom: 7px;
+
+  width: 9px;
+  height: 38px;
+
+  background: #6b8b5e;
+
+  border-radius: 100% 0 100% 0;
+
+  transform-origin: bottom center;
+}
+
+
+.tulip .leaf-left {
+  left: 13px;
+
+  transform: rotate(-24deg);
+}
+
+
+.tulip .leaf-right {
+  right: 13px;
+
+  transform:
+    scaleX(-1)
+    rotate(-24deg);
+}
+
+
+.tulip-head {
+  position: absolute;
+
+  left: 50%;
+  top: 2px;
+
+  width: 35px;
+  height: 32px;
+
+  transform: translateX(-50%);
+}
+
+
+.tulip-petal {
+  position: absolute;
+
+  bottom: 0;
+}
+
+
+.tulip-petal.left {
+  left: 1px;
+
+  width: 19px;
+  height: 27px;
+
+  background: #d96765;
+
+  border-radius: 90% 25% 70% 50%;
+
+  transform: rotate(-10deg);
+}
+
+
+.tulip-petal.right {
+  right: 1px;
+
+  width: 19px;
+  height: 27px;
+
+  background: #d96765;
+
+  border-radius: 25% 90% 50% 70%;
+
+  transform: rotate(10deg);
+}
+
+
+.tulip-petal.middle {
+  left: 9px;
+
+  width: 17px;
+  height: 31px;
+
+  background: #e58278;
+
+  border-radius: 70% 70% 45% 45%;
+}
+
+
+
+/* =====================================
+   PURPLE FLOWER
+===================================== */
+
+.purple .stem {
+  height: 52px;
+}
+
+
+.purple .leaf {
+  bottom: 4px;
+
+  width: 8px;
+  height: 36px;
+
+  background: #67885a;
+
+  border-radius: 100% 0 100% 0;
+
+  transform-origin: bottom center;
+}
+
+
+.purple .leaf-left {
+  left: 14px;
+
+  transform: rotate(-21deg);
+}
+
+
+.purple .leaf-right {
+  right: 14px;
+
+  transform:
+    scaleX(-1)
+    rotate(-21deg);
+}
+
+
+.purple-head {
+  position: absolute;
+
+  left: 50%;
+  top: 0;
+
+  width: 30px;
+  height: 42px;
+
+  transform: translateX(-50%);
+}
+
+
+.purple-bloom {
+  position: absolute;
+
+  width: 11px;
+  height: 11px;
+
+  border-radius: 50%;
+
+  background: #8b70a9;
+}
+
+
+.purple-bloom:nth-child(1) {
+  left: 10px;
+  top: 0;
+}
+
+
+.purple-bloom:nth-child(2) {
+  left: 3px;
+  top: 8px;
+
+  background: #9c82ba;
+}
+
+
+.purple-bloom:nth-child(3) {
+  right: 3px;
+  top: 8px;
+
+  background: #765d99;
+}
+
+
+.purple-bloom:nth-child(4) {
+  left: 9px;
+  top: 13px;
+
+  width: 13px;
+  height: 13px;
+}
+
+
+.purple-bloom:nth-child(5) {
+  left: 3px;
+  top: 22px;
+
+  background: #745c99;
+}
+
+
+.purple-bloom:nth-child(6) {
+  right: 3px;
+  top: 22px;
+
+  background: #9b80b8;
+}
+
+
+.purple-bloom:nth-child(7) {
+  left: 10px;
+  top: 30px;
+
+  width: 10px;
+  height: 10px;
+}
+
+
+
+/* =====================================
+   PLANTED GRASS
+===================================== */
+
+.planted-item.grass {
+  width: 48px;
+  height: 48px;
+}
+
+
+.plant-grass-blade {
+  position: absolute;
+
+  left: 50%;
+  bottom: 0;
+
+  width: 3px;
+
+  background: #66875c;
+
+  border-radius: 100% 100% 0 0;
+
+  transform-origin: bottom center;
+}
+
+
+.plant-grass-blade:nth-child(1) {
+  height: 32px;
+
+  transform:
+    translateX(-50%)
+    rotate(-31deg);
+}
+
+
+.plant-grass-blade:nth-child(2) {
+  height: 39px;
+
+  transform:
+    translateX(-50%)
+    rotate(-15deg);
+}
+
+
+.plant-grass-blade:nth-child(3) {
+  height: 45px;
+
+  transform:
+    translateX(-50%)
+    rotate(0deg);
+}
+
+
+.plant-grass-blade:nth-child(4) {
+  height: 39px;
+
+  transform:
+    translateX(-50%)
+    rotate(15deg);
+}
+
+
+.plant-grass-blade:nth-child(5) {
+  height: 31px;
+
+  transform:
+    translateX(-50%)
+    rotate(31deg);
+}
+
+
+
+/* =====================================
+   PORTFOLIO
+===================================== */
+
+.portfolio-section {
+  width: calc(100% - 72px);
+
+  margin: 0 auto;
+
+  padding: 35px 0 85px;
+
+  border-top: 1px solid var(--border);
+}
+
+
+.section-heading {
+  display: flex;
+
+  align-items: baseline;
+
+  gap: 16px;
+
+  margin-bottom: 30px;
+}
+
+
+.section-heading h2 {
+  margin: 0;
+
+  font-family: "Lemon", serif;
+
+  font-size: 40px;
+}
+
+
+.section-heading p {
+  margin: 0;
+
+  font-size: 13px;
+
+  opacity: 0.55;
+}
+
+
+
+/* =====================================
+   MASONRY GRID
+===================================== */
+
+.projects-grid {
+  column-count: 5;
+
+  column-gap: 15px;
+}
+
 
 .project {
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  display: inline-block;
+
+  width: 100%;
+
+  margin: 0 0 16px;
+
   overflow: hidden;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-  /* 刪除固定高度，讓內容自動調整 */
-  padding-top: 0.5rem;
-  display: flex; /* 使項目可自動擴展 */
-  flex-direction: column; /* 讓項目內部元素垂直排列 */
+
+  break-inside: avoid;
+
+  border: 1px solid rgba(48, 48, 48, 0.5);
+
+  border-radius: 2px;
+
+  background: rgba(255, 255, 255, 0.16);
+
+  text-decoration: none;
+
+  transition:
+    transform 0.15s ease,
+    box-shadow 0.15s ease;
 }
 
-.project-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: flex-start;
-  padding: 0.5rem;
-  flex-grow: 1;
-}
-
-.project img {
-  display: block; 
-  font-family: "Figtree", serif;
-  width: 100%; /* 保持圖片寬度為 100% */
-  height: 200px; /* 設定固定高度 */
-  object-fit: contain; /* 確保圖片填充容器且不失真 */
-  margin: 0 auto; /* 居中圖片 */
-}
-
-.project h3 {
-  font-family: "Figtree", serif;
-  font-size: 1.5rem;
-  margin: 1rem;
-}
-
-.project p {
-  font-family: "Figtree", serif;
-  margin: 0 1rem 1rem 1rem;
-  font-size: 1rem;
-  color: #555;
-}
-
-.project time {
-  font-family: "Figtree", serif;
-  margin: 0 1rem 1rem 1rem;
-  font-size: 0.9rem; /* 調整時間行的字體大小 */
-  color: #999; /* 調整時間行的顏色以增強可讀性 */
-}
 
 .project:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+
+  box-shadow:
+    0 6px 0 rgba(48, 48, 48, 0.11);
 }
 
-.link {
-  text-decoration: none;
-  color: inherit;
-  position: relative; /* Ensure that the pseudo-element is positioned relative to the link */
-  transition: background-color 0.3s ease; /* Smooth transition for background color */
+
+.project img {
+  width: 100%;
+
+  height: auto;
+
+  border-bottom:
+    1px solid rgba(48, 48, 48, 0.4);
 }
 
-.link:hover {
-  background-color: peachpuff; /* Change background color on hover */
+
+.project-info {
+  padding: 9px 10px 11px;
 }
 
-.footer {
-  text-align: center; 
-  margin: 2rem 0;
-  font-family: "Figtree", serif;
+
+.publication {
+  margin: 0 0 3px;
+
+  font-size: 11px;
+
+  font-weight: 800;
+
+  letter-spacing: 0.03em;
 }
 
-.footer-text {
-  color: grey;
+
+.project h3 {
+  margin: 0;
+
+  font-size: 17px;
+
+  line-height: 1.12;
+
+  font-weight: 500;
 }
 
-/* 預設樣式 (桌面版) */
-body {
-  font-family: 'Figtree', sans-serif;
+
+.project-tools {
+  margin: 8px 0 0;
+
+  font-size: 11px;
+
+  opacity: 0.58;
 }
 
-.nav-container {
-  display: flex;
-  justify-content: space-between;
-  padding: 20px;
+
+.narratives-grid {
+  column-count: 4;
 }
 
-.main {
-  max-width: 800px;
+
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer {
+  width: calc(100% - 72px);
+
   margin: 0 auto;
+
+  padding: 32px 0 45px;
+
+  border-top: 1px solid var(--border);
 }
 
-/* 平板 (768px 到 1024px) */
-@media screen and (max-width: 1024px) {
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .navlinks {
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-  }
-  
-  .main {
-    padding: 0 20px;
-  }
+
+.footer-inner {
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: flex-end;
+
+  gap: 30px;
 }
 
-/* 手機 (小於 768px) */
-@media screen and (max-width: 768px) {
-  h1 {
-    font-size: 24px;
-  }
-  
-  .nav-container {
-    flex-direction: column;
-    align-items: center;
-    padding: 10px;
-  }
-  
-  .navlinks {
-    flex-direction: column;
-    align-items: center;
+
+footer p {
+  margin: 0;
+}
+
+
+footer a {
+  text-decoration-color: var(--accent);
+
+  text-decoration-thickness: 3px;
+}
+
+
+.footer-note {
+  font-size: 12px;
+
+  opacity: 0.55;
+}
+
+
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 1100px) {
+
+  .hero {
+    width: calc(100% - 72px);
+
+    gap: 45px;
   }
 
-  .main {
-    text-align: center;
-    padding: 0 15px;
-  }
-  
-  .projects-container {
-    grid-template-columns: 1fr; /* 確保在小屏幕上使用單列顯示 */
-  }
-  
-  .project {
+
+  .garden-wrapper {
     width: 100%;
-    margin-bottom: 20px;
   }
 
-  .footer {
-    text-align: center;
+
+  .projects-grid {
+    column-count: 3;
   }
+
+
+  .narratives-grid {
+    column-count: 3;
+  }
+
+}
+
+
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media (max-width: 750px) {
+
+  body {
+    font-size: 16px;
+  }
+
+
+  .site-header {
+    width: calc(100% - 40px);
+
+    padding: 16px 0 14px;
+
+    flex-direction: column;
+
+    gap: 18px;
+  }
+
+
+  .site-name {
+    font-size: 34px;
+  }
+
+
+  .nav {
+    width: 100%;
+
+    padding: 0;
+
+    gap: 20px;
+
+    justify-content: space-between;
+  }
+
+
+  .nav a {
+    font-size: 16px;
+  }
+
+
+  .hero {
+    /*
+      Keep same left/right edge as header
+      on mobile too.
+    */
+    width: calc(100% - 40px);
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+    padding: 28px 0 50px;
+  }
+
+
+  .intro {
+    max-width: none;
+  }
+
+
+  .garden-wrapper {
+    width: 100%;
+
+    max-width: none;
+  }
+
+
+  .garden-title {
+    font-size: 16px;
+  }
+
+
+  .garden {
+    height: 250px;
+  }
+
+
+  .portfolio-section {
+    width: calc(100% - 40px);
+
+    padding-bottom: 60px;
+  }
+
+
+  .section-heading {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 2px;
+  }
+
+
+  .section-heading h2 {
+    font-size: 34px;
+  }
+
+
+  .projects-grid,
+  .narratives-grid {
+    column-count: 2;
+
+    column-gap: 10px;
+  }
+
+
+  .project {
+    margin-bottom: 10px;
+  }
+
+
+  .project h3 {
+    font-size: 14px;
+  }
+
+
+  .project-tools {
+    display: none;
+  }
+
+
+  footer {
+    width: calc(100% - 40px);
+  }
+
+
+  .footer-inner {
+    flex-direction: column;
+
+    align-items: flex-start;
+  }
+
+}
+
+
+
+/* =====================================
+   SMALL PHONE
+===================================== */
+
+@media (max-width: 450px) {
+
+  .garden-heading {
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+
+  .projects-grid,
+  .narratives-grid {
+    column-count: 1;
+  }
+
+
+  .flower-picker {
+    padding: 7px 8px;
+  }
+
+
+  .flower-picker p {
+    font-size: 10px;
+  }
+
+
+  .flower-options {
+    gap: 2px;
+  }
+
+
+  .plant-option {
+    width: 36px;
+    height: 36px;
+
+    font-size: 23px;
+  }
+
 }

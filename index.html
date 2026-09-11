@@ -1,264 +1,989 @@
-<!DOCTYPE html> 
-  <html lang="en-US">
-    <head>
-      <meta charset="utf-8">
-      <meta name="viewport"     content="width=device-width,initial-scale=1">
-      <meta name="description" content="Personal Website">    
-      <title>Hailey's personal website</title>    
-      <!-- Put your fonts and other CSS here -->    
-      <link rel="stylesheet" href="./styles/main.css"> 
-      <script src="main.js"></script>
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lemon&family=Rubik+80s+Fade&family=Rubik+Doodle+Shadow&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Rubik+80s+Fade&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
-      <link rel="preconnect" href="https://fonts.googleapis.com">
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-      <link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Rubik+80s+Fade&family=Rubik+Moonrocks&display=swap" rel="stylesheet">
-    </head>
+<!DOCTYPE html>
+<html lang="en-US">
 
-    <body>
-      <div class="nav-container">
-        <h1>Hailey Wang</h1>
-        <nav>
-          <ul class="navlinks">
-            <li><a href="#graphics" class="link">Graphics</a></li>
-            <li><a href="#narratives" class="link">Narratives</a></li>
-            <li><a href= "assets/Hailey_CV.pdf" class = "link">Resume</a></li>
-          </ul>
-        </nav>
+<head>
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Hailey Wang — data and graphics journalist"
+  >
+
+  <title>Hailey Wang</title>
+
+  <link
+    rel="stylesheet"
+    href="./styles/main.css"
+  >
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&family=Lemon&display=swap"
+    rel="stylesheet"
+  >
+
+  <script
+    src="./main.js"
+    defer
+  ></script>
+</head>
+
+
+<body>
+
+  <!-- =====================================
+       HEADER
+  ====================================== -->
+
+  <header class="site-header">
+
+    <a
+      href="#top"
+      class="site-name"
+    >
+      Hailey Wang
+    </a>
+
+    <nav class="nav">
+
+      <a href="#graphics">
+        Graphics
+      </a>
+
+      <a href="#narratives">
+        Narratives
+      </a>
+
+      <a
+        href="./assets/Hailey_CV.pdf"
+        target="_blank"
+      >
+        Resume
+      </a>
+
+    </nav>
+
+  </header>
+
+
+  <main id="top">
+
+    <!-- =====================================
+         HERO
+    ====================================== -->
+
+    <section class="hero">
+
+      <!-- INTRO -->
+
+      <div class="intro">
+
+        <p class="intro-lede">
+          Hello world! I am Hailey, and I tell data-driven stories.
+        </p>
+
+        <p>
+          I graduated from
+          <a
+            href="https://journalism.berkeley.edu/person/hailey-wang-2/"
+            target="_blank"
+          >
+            Berkeley Graduate School of Journalism
+          </a>
+          and am currently a data and graphics reporter at
+          <a
+            href="https://www.latimes.com/people/hailey-wang"
+            target="_blank"
+          >
+            the Los Angeles Times
+          </a>.
+        </p>
+
+        <p>
+          Previously, I was a reporter at
+          <a
+            href="https://www.bloomberg.com/authors/AW57Hk59lFw/hailey-wang"
+            target="_blank"
+          >
+            Bloomberg
+          </a>,
+          <a
+            href="https://lookout.co/author/hailey-wang"
+            target="_blank"
+          >
+            Lookout Santa Cruz
+          </a>,
+          <a
+            href="https://oaklandnorth.net/author/hwang/"
+            target="_blank"
+          >
+            Oakland North
+          </a>,
+          <a
+            href="https://www.rhythmsmonthly.com/?cat=1431"
+            target="_blank"
+          >
+            Rhythms Monthly
+          </a>
+          and Business Today.
+        </p>
+
+        <p>
+          I write, code and make maps.
+          When I am not in front of my laptop,
+          I can be found in a cinema or a local bookstore.
+        </p>
+
+        <a
+          href="#graphics"
+          class="view-projects"
+        >
+          View projects ↓
+        </a>
+
       </div>
 
-      <div class="main">
-        <p>Hello world! I am Hailey, and I tell data-driven stories.</p>
-        <p>I graduated from <u class="underline"><a href="https://journalism.berkeley.edu/person/hailey-wang-2/" class="link">Berkeley Graduate School of Journalism</a></u> and am currently a data and graphics reporter at <u class="underline"><a href="https://www.latimes.com/people/hailey-wang" class="link">the Los Angeles Times</a></u>. Previously, I was a reporter at <u class="underline"><a href="https://www.bloomberg.com/authors/AW57Hk59lFw/hailey-wang" class="link">Bloomberg</a></u>, <u class="underline"><a href="https://lookout.co/author/hailey-wang" class="link">Lookout Santa Cruz</a></u>, <u class="underline"><a href="https://oaklandnorth.net/author/hwang/" class="link">Oakland North</a></u>, <u class="underline"><a href="https://www.rhythmsmonthly.com/?cat=1431" class="link">Rhythmns Monthly</a></u> and <u class="underline">Business Today</u>.</p>
-        <p>I write, code and make maps. When I am not in front of my laptop, I can be found in a cinema or a local bookstore.</p>
-        <p><u class="underline"><a href="#graphics" class="link">View Project⬇</a></u></p>
+
+      <!-- =====================================
+           GARDEN
+      ====================================== -->
+
+      <div class="garden-wrapper">
+
+        <div class="garden-heading">
+
+          <p class="garden-title">
+            Hey! Since you're here, why not leave a little flower or some grass in my digital garden?
+          </p>
+
+          <button
+            class="clear-garden"
+            id="clear-garden"
+            type="button"
+          >
+            reset
+          </button>
+
+        </div>
+
+
+        <div class="garden">
+
+          <!-- SKY -->
+
+          <div class="garden-sky">
+
+            <div class="cloud cloud-one"></div>
+            <div class="cloud cloud-two"></div>
+            <div class="cloud cloud-three"></div>
+            <div class="cloud cloud-four"></div>
+
+          </div>
+
+
+          <!-- GRASS -->
+
+          <div
+            class="grass-field"
+            id="grass-field"
+          >
+
+            <div class="grass-texture texture-one">
+              ^^^ &nbsp;&nbsp;&nbsp; ^^ &nbsp;&nbsp;&nbsp; ^^^
+              &nbsp;&nbsp;&nbsp; ^^ &nbsp;&nbsp;&nbsp; ^^^
+              &nbsp;&nbsp;&nbsp; ^^
+            </div>
+
+            <div class="grass-texture texture-two">
+              ^^ &nbsp;&nbsp;&nbsp; ^^^ &nbsp;&nbsp;&nbsp; ^^
+              &nbsp;&nbsp;&nbsp; ^^^ &nbsp;&nbsp;&nbsp; ^^
+              &nbsp;&nbsp;&nbsp; ^^^
+            </div>
+
+            <div class="grass-texture texture-three">
+              ^^^ &nbsp;&nbsp;&nbsp; ^^ &nbsp;&nbsp;&nbsp; ^^^
+              &nbsp;&nbsp;&nbsp; ^^ &nbsp;&nbsp;&nbsp; ^^^
+              &nbsp;&nbsp;&nbsp; ^^
+            </div>
+
+
+            <p
+              class="garden-instruction"
+              id="garden-instruction"
+            >
+              pick one below, then click the grass
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <!-- FLOWER PICKER -->
+
+        <div class="flower-picker">
+
+          <p>
+            Pick one, then click anywhere on the grass.
+          </p>
+
+          <div class="flower-options">
+
+            <button
+              type="button"
+              class="plant-option"
+              data-flower="sunflower"
+              aria-label="Sunflower"
+              title="Sunflower"
+            >
+              🌻
+            </button>
+
+            <button
+              type="button"
+              class="plant-option"
+              data-flower="tulip"
+              aria-label="Tulip"
+              title="Tulip"
+            >
+              🌷
+            </button>
+
+            <button
+              type="button"
+              class="plant-option"
+              data-flower="purple"
+              aria-label="Purple flower"
+              title="Purple flower"
+            >
+              🪻
+            </button>
+
+            <button
+              type="button"
+              class="plant-option"
+              data-flower="grass"
+              aria-label="Grass"
+              title="Grass"
+            >
+              🌱
+            </button>
+
+          </div>
+
+        </div>
 
       </div>
 
-      <div id="graphics" class="graphics">
-        <h2>Graphics</h2>
-          <div class="projects-container">
-
-            <a href="https://hailey-wang-1998.github.io/hk-media-crisis/" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/ScreenRecording2025-05-21at10.34.10PM-ezgif.com-video-to-gif-converter.gif" alt="preview img for thesis">
-                <h3>Reporting Under Censorship: Hong Kong Journalists Resist as China Silences Dissent</h3>
-                <p>Built with <b>Mapbox</b>, <b>JavaScript</b> and <b>Python (webscrape)</b></p>
-                <p>May 2025</p>
-              </div>
-            </a>
-
-            <a href="https://www.latimes.com/california/story/2026-02-17/eaton-palisades-fire-refugees-moved-near-far-often" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/severity.png" alt="preview img for story">
-                <h3>If the giant sequoia is dying out, why are there tens of thousands of seedlings and saplings?</h3>
-                <p><b>Los Angeles Times</b></p>
-                <p>Built with <b>QGIS</b> and <b>Illustrator</b></p>
-                <p>March 2026</p>
-              </div>
-            </a>
-
-            <a href="https://www.latimes.com/california/story/2026-02-17/eaton-palisades-fire-refugees-moved-near-far-often" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/firemap.png" alt="preview img for story">
-                <h3>Eaton and Palisades fire refugees moved near and far — and often</h3>
-                <p><b>Los Angeles Times</b></p>
-                <p>Built with <b>QGIS</b>, <b>Illustrator</b> and <b>Python(data analysis)</b></p>
-                <p>February 2026</p>
-              </div>
-            </a>
-
-            <a href="https://www.latimes.com/california/story/2025-12-21/prices-jump-56-for-airbnbs-in-la-during-world-cup" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/fifa.gif" alt="preview img for story">
-                <h3>Demand surges for Airbnbs during the World Cup in L.A., with prices jumping 56%</h3>
-                <p><b>Los Angeles Times</b></p>
-                <p>Built with <b>Mapbox</b>, <b>JavaScript</b> and <b>Python(data analysis)</b></p>
-                <p>December 2025</p>
-              </div>
-            </a>
-
-            <a href="https://www.latimes.com/california/story/2025-11-05/will-these-six-california-gop-house-members-survive-new-districts" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/colorful.png" alt="preview img for story">
-                <h3>Will these six California GOP House members survive new districts?</h3>
-                <p><b>Los Angeles Times</b></p>
-                <p>Built with <b>QGIS</b>, <b>Mapbox</b> and <b>Illustrator</b></p>
-                <p>November 2025</p>
-              </div>
-            </a>
+    </section>
 
 
-            <a href="https://www.latimes.com/lifestyle/story/2025-09-15/proposed-zone-zero-rules-would-remove-all-plants-within-five-feet-homes-fire-areas" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/pinkmap.png" alt="preview img for thesis">
-                <h3>‘Zone zero’ rule could be California’s wildfire savior — or its environmental undoing</h3>
-                <p><b>Los Angeles Times</b></p>
-                <p>Built with <b>QGIS</b>, <b>Mapbox</b> and <b>Illustrator</b></p>
-                <p>September 2025</p>
-              </div>
-            </a>
+    <!-- =====================================
+         GRAPHICS
+    ====================================== -->
 
-            <a href="https://www.latimes.com/california/story/2025-08-27/proposed-california-congressional-district-map-democrats-republicans" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/redblue.png" alt="preview img for thesis">
-                <h3>Will your congressional district shift left or right in Newsom’s proposed map?</h3>
-                <p><b>Los Angeles Times</b></p>
-                <p>Built with <b>JavaScript</b>, <b>QGIS</b> and <b>Python</b></p>
-                <p>August 2025</p>
-              </div>
-            </a>
+    <section
+      class="portfolio-section"
+      id="graphics"
+    >
 
+      <div class="section-heading">
 
-            <a href="https://www.latimes.com/california/story/2025-07-24/housing-tracker-for-june" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/tracker.png" alt="preview img for thesis">
-                <h3>Southern California home prices fall nearly 1%</h3>
-                <p><b>Los Angeles Times</b></p>
-                <p>Built with <b>DataWrapper API</b>, <b>Zillow API</b> and <b>Python</b></p>
-                <p>July 2025</p>
-              </div>
-            </a>
+        <h2>
+          Graphics
+        </h2>
 
+        <p>
+          Selected visual and data work
+        </p>
 
-            <a href="https://lookout.co/rent-control-passed-in-santa-cruz-and-watsonville-in-november-and-other-election-map-stories/" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/props.gif" alt="preview img for proposition project">
-                <h3>Santa Cruz Election Map Stories<br></br></h3>
-                <p><b>Lookout Santa Cruz</b></p>
-                <p>Built with <b>Python(Folium)</b>, <b>QGIS</b> and <b>JavaScript</b></p>
-                <p>December 2024</p>
-              </div>
-            </a>
-
-            <a href="https://hailey-wang-1998.github.io/bike-collision-types/" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/bike.png" alt="preview img for the bike project">
-                <h3>Santa Cruz Bike Crash Map, Sorted by Collision Types</h3>
-                <p>Built with <b>Python</b> and <b>Mapbox</b></p>
-                <p>October 2024</p>
-              </div>
-            </a>
-
-            <a href="https://hardestlanguage.github.io/index.html" class="link" target="_blank">
-              <div class="project">
-                <img src="assets/language.gif" alt="preview img for language project">
-                <h3>Which Language Is the Hardest? <br></br></h3>
-                <p>Built with <b>HTML</b>, <b>CSS</b> and <b>JavaScript</b></p>
-                <p>May 2024</p>
-              </div>
-            </a>
-            <a href="housing project/index.html" class="link" target="_blank">
-              <div class="project">
-                <!-- <img src="assets/housing.png" alt="preview img for housing project" style="width: 450px;"> -->
-                <img src="assets/housing.png" alt="preview img for housing project">
-                <h3>One of the Largest UC Schools Can't House All Its Students</h3>
-                <p>Built with <b>Python</b>, <b>QGIS</b>, <b>HTML</b> and <b>CSS</b></p>
-                <p>March 2024</p>
-              </div>
-
-                    <!-- <a href="oakland-car-thefts-increase/" class="link" target="_blank"> -->
-              <a href="https://haileywang1998.github.io/projects/4_project/" class="link" target="_blank">
-                <div class="project">
-                  <img src="assets/circles.png" alt="preview img for car theft project">
-                  <h3>Car Thefts Spike in Oakland, with Certain Neighborhoods Targeted</h3>
-                  <p>Built with <b>Python</b></p>
-                  <p>December 2023</p>
-                </div>
-              </a>
-
-            </a>
-              <div class="project">
-                <a href="https://haileywang1998.github.io/projects/3_project/" class="link" target="_blank">
-                <img src="assets/heartdisease.png" alt="preview img for depression story" style="width: 250px;">
-                <h3>How Are Chronic Diseases Linked to Depression?</h3>
-                <p>Built with <b>Python</b>, <b>QGIS</b>, <b>Illustrator</b>, <b>HTML</b> and <b>CSS</b></p>
-                <p>November 2023</p>
-                </a>
-              </div>
-
-
-              <div class="project">
-                <a href="https://haileywang1998.github.io/projects/0_project/" class="link" target="_blank">
-                <img src="assets/twocolormap.png" alt="preview img for homeless story" style="width: 250px;">
-                <h3>No Safe Place to Sleep for Homeless Women in Oakland</h3>
-                <p>Built with <b>DataWrapper</b></p>
-                <p>September 2023</p>
-                </a>
-              </div>
-
-              <a href="https://readymag.website/u2950846684/4380060/" class="link" target="_blank">
-                <div class="project">
-                  <img src="assets/garbage.png" alt="preview img for car theft project">
-                  <h3>Oakland to Solve Illegal Dumping Issues with Bulky Block Parties</h3>
-                  <p>Built with <b>DataWrapper</b>, <b> Readymag</b> and <b>Tableau</b></p>
-                  <p>August 2023</p>
-                </div>
-              </a>
-
-              <a href="https://haileywang1998.github.io/projects/1_project/" class="link" target="_blank">
-                <div class="project">
-                  <img src="assets/tsai.png" alt="preview img for the tsai project">
-                  <h3>An Analysis of Factors Affecting Support for President Tsai</h3>
-                  <p>Built with <b>Illustrator</b> and <b>R Studio</b></p>
-                  <p>August 2023</p>
-                </div>
-              </a>
-
-
-           </div>
       </div>
 
-      <div id="narratives" class="narratives">
-        <h2>Narratives</h2>
-        <div class="projects-container">
-          <a href="https://www.bloomberg.com/news/articles/2024-08-22/frenzy-fuels-taiwan-home-prices-despite-threat-of-china-invasion?srnd=undefined&embedded-checkout=true" class="link" target="_blank">
-            <div class="project">
-              <img src="assets/fomo.jpg" alt="preview img for the fomo piece" style="width: 250px; height: auto;">
-              <h3>FOMO Frenzy Fuels Taiwan Home Prices Despite Threat of China Invasion</h3>
-              <p><b>Bloomberg</b></p>
-              <p>August 2024</p>
-            </div>
-          </a>
 
-          <a href="https://www.bloomberg.com/news/articles/2024-08-21/taiwan-tech-tycoons-build-50-billion-fortune-from-chips-and-ai-industries?srnd=undefined" class="link" target="_blank">
-            <div class="project">
-              <img src="assets/billionare.png" alt="preview img for the billionare piece" style="width: 250px; height: auto;">
-              <h3>Tycoons Behind Taiwan's 'Silicon Shield' Build a $50 Billion Fortune <br></br></h3>
-              <p><b>Bloomberg</b></p>
-              <p>August 2024</p>
-            </div>
-          </a>
+      <div class="projects-grid">
 
-          <a href="https://www.bloomberg.com/news/articles/2024-08-21/taiwan-tech-tycoons-build-50-billion-fortune-from-chips-and-ai-industries?srnd=undefined" class="link" target="_blank">
-            <div class="project">
-              <img src="assets/tourist.png" alt="preview img for the tourist piece" style="width: 250px; height: auto;">
-              <h3>Taiwan Turns to Southeast Asian Tourists as Chinese Stay Away</h3>
-              <p><b>Bloomberg</b></p>
-              <p>July 2024</p>
-            </div>
-          </a>
+        <a
+          href="https://hailey-wang-1998.github.io/hk-media-crisis/"
+          class="project"
+          target="_blank"
+        >
 
-          <a href="https://oaklandnorth.net/2023/11/18/oakland-homekey-projects-hotel-motel-conversions/" class="link" target="_blank">
-            <div class="project">
-              <img src="assets/homeless.png" alt="preview img for the homeless piece" style="width: 250px; height: auto;">
-              <h3>Oakland Adds Four More Hotel Projects to Growing List</h3>
-              <p><b>Oakland North</b></p>
-              <p>November 2023</p>
-            </div>
-          </a>
-       </div>
+          <img
+            src="assets/ScreenRecording2025-05-21at10.34.10PM-ezgif.com-video-to-gif-converter.gif"
+            alt="Reporting Under Censorship project"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              UC BERKELEY
+            </p>
+
+            <h3>
+              Reporting Under Censorship: Hong Kong Journalists Resist as China Silences Dissent
+            </h3>
+
+            <p class="project-tools">
+              Mapbox · JavaScript · Python
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://www.latimes.com/california/story/2026-02-17/eaton-palisades-fire-refugees-moved-near-far-often"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/severity.png"
+            alt="Giant sequoia project"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              LOS ANGELES TIMES
+            </p>
+
+            <h3>
+              If the giant sequoia is dying out, why are there tens of thousands of seedlings and saplings?
+            </h3>
+
+            <p class="project-tools">
+              QGIS · Illustrator
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://www.latimes.com/california/story/2026-02-17/eaton-palisades-fire-refugees-moved-near-far-often"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/firemap.png"
+            alt="Eaton and Palisades fire refugees map"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              LOS ANGELES TIMES
+            </p>
+
+            <h3>
+              Eaton and Palisades fire refugees moved near and far — and often
+            </h3>
+
+            <p class="project-tools">
+              QGIS · Illustrator · Python
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://www.latimes.com/california/story/2025-12-21/prices-jump-56-for-airbnbs-in-la-during-world-cup"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/fifa.gif"
+            alt="World Cup Airbnb project"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              LOS ANGELES TIMES
+            </p>
+
+            <h3>
+              Demand surges for Airbnbs during the World Cup in L.A., with prices jumping 56%
+            </h3>
+
+            <p class="project-tools">
+              Mapbox · JavaScript · Python
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://www.latimes.com/california/story/2025-11-05/will-these-six-california-gop-house-members-survive-new-districts"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/colorful.png"
+            alt="California congressional district map"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              LOS ANGELES TIMES
+            </p>
+
+            <h3>
+              Will these six California GOP House members survive new districts?
+            </h3>
+
+            <p class="project-tools">
+              QGIS · Mapbox · Illustrator
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://www.latimes.com/lifestyle/story/2025-09-15/proposed-zone-zero-rules-would-remove-all-plants-within-five-feet-homes-fire-areas"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/pinkmap.png"
+            alt="Zone zero wildfire map"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              LOS ANGELES TIMES
+            </p>
+
+            <h3>
+              ‘Zone zero’ rule could be California’s wildfire savior — or its environmental undoing
+            </h3>
+
+            <p class="project-tools">
+              QGIS · Mapbox · Illustrator
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://www.latimes.com/california/story/2025-08-27/proposed-california-congressional-district-map-democrats-republicans"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/redblue.png"
+            alt="California congressional map"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              LOS ANGELES TIMES
+            </p>
+
+            <h3>
+              Will your congressional district shift left or right in Newsom’s proposed map?
+            </h3>
+
+            <p class="project-tools">
+              JavaScript · QGIS · Python
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://www.latimes.com/california/story/2025-07-24/housing-tracker-for-june"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/tracker.png"
+            alt="Southern California housing tracker"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              LOS ANGELES TIMES
+            </p>
+
+            <h3>
+              Southern California home prices fall nearly 1%
+            </h3>
+
+            <p class="project-tools">
+              Datawrapper API · Zillow API · Python
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://lookout.co/rent-control-passed-in-santa-cruz-and-watsonville-in-november-and-other-election-map-stories/"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/props.gif"
+            alt="Santa Cruz election maps"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              LOOKOUT SANTA CRUZ
+            </p>
+
+            <h3>
+              Santa Cruz Election Map Stories
+            </h3>
+
+            <p class="project-tools">
+              Python · QGIS · JavaScript
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://hailey-wang-1998.github.io/bike-collision-types/"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/bike.png"
+            alt="Santa Cruz bike crash map"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              PERSONAL PROJECT
+            </p>
+
+            <h3>
+              Santa Cruz Bike Crash Map, Sorted by Collision Types
+            </h3>
+
+            <p class="project-tools">
+              Python · Mapbox
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://hardestlanguage.github.io/index.html"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/language.gif"
+            alt="Hardest language project"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              PERSONAL PROJECT
+            </p>
+
+            <h3>
+              Which Language Is the Hardest?
+            </h3>
+
+            <p class="project-tools">
+              HTML · CSS · JavaScript
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="housing project/index.html"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/housing.png"
+            alt="UC housing project"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              UC BERKELEY
+            </p>
+
+            <h3>
+              One of the Largest UC Schools Can't House All Its Students
+            </h3>
+
+            <p class="project-tools">
+              Python · QGIS · HTML · CSS
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://haileywang1998.github.io/projects/4_project/"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/circles.png"
+            alt="Oakland car theft analysis"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              UC BERKELEY
+            </p>
+
+            <h3>
+              Car Thefts Spike in Oakland, with Certain Neighborhoods Targeted
+            </h3>
+
+            <p class="project-tools">
+              Python
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://haileywang1998.github.io/projects/3_project/"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/heartdisease.png"
+            alt="Chronic disease and depression project"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              UC BERKELEY
+            </p>
+
+            <h3>
+              How Are Chronic Diseases Linked to Depression?
+            </h3>
+
+            <p class="project-tools">
+              Python · QGIS · Illustrator
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://haileywang1998.github.io/projects/0_project/"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/twocolormap.png"
+            alt="Oakland homelessness project"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              UC BERKELEY
+            </p>
+
+            <h3>
+              No Safe Place to Sleep for Homeless Women in Oakland
+            </h3>
+
+            <p class="project-tools">
+              Datawrapper
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://readymag.website/u2950846684/4380060/"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/garbage.png"
+            alt="Oakland illegal dumping project"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              UC BERKELEY
+            </p>
+
+            <h3>
+              Oakland to Solve Illegal Dumping Issues with Bulky Block Parties
+            </h3>
+
+            <p class="project-tools">
+              Datawrapper · Readymag · Tableau
+            </p>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://haileywang1998.github.io/projects/1_project/"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/tsai.png"
+            alt="Taiwan political analysis"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              PERSONAL PROJECT
+            </p>
+
+            <h3>
+              An Analysis of Factors Affecting Support for President Tsai
+            </h3>
+
+            <p class="project-tools">
+              Illustrator · R
+            </p>
+
+          </div>
+
+        </a>
+
       </div>
-      <footer class="footer">
-        <p>Say hi at <a href="mailto:mimiwang@berkeley.edu" class="link">mimiwang@berkeley.edu</a></p>
-        <p class="footer-text"> Made with a lot of googling and black tea. </p>
-      </footer>
-    </body>
-  </html>
-    
-  
+
+    </section>
+
+
+    <!-- =====================================
+         NARRATIVES
+    ====================================== -->
+
+    <section
+      class="portfolio-section"
+      id="narratives"
+    >
+
+      <div class="section-heading">
+
+        <h2>
+          Narratives
+        </h2>
+
+        <p>
+          Reporting and writing
+        </p>
+
+      </div>
+
+
+      <div class="projects-grid narratives-grid">
+
+        <a
+          href="https://www.bloomberg.com/news/articles/2024-08-22/frenzy-fuels-taiwan-home-prices-despite-threat-of-china-invasion"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/fomo.jpg"
+            alt="Taiwan housing story"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              BLOOMBERG
+            </p>
+
+            <h3>
+              FOMO Frenzy Fuels Taiwan Home Prices Despite Threat of China Invasion
+            </h3>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://www.bloomberg.com/news/articles/2024-08-21/taiwan-tech-tycoons-build-50-billion-fortune-from-chips-and-ai-industries"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/billionare.png"
+            alt="Taiwan technology billionaires story"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              BLOOMBERG
+            </p>
+
+            <h3>
+              Tycoons Behind Taiwan's 'Silicon Shield' Build a $50 Billion Fortune
+            </h3>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://www.bloomberg.com/"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/tourist.png"
+            alt="Taiwan tourism story"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              BLOOMBERG
+            </p>
+
+            <h3>
+              Taiwan Turns to Southeast Asian Tourists as Chinese Stay Away
+            </h3>
+
+          </div>
+
+        </a>
+
+
+        <a
+          href="https://oaklandnorth.net/2023/11/18/oakland-homekey-projects-hotel-motel-conversions/"
+          class="project"
+          target="_blank"
+        >
+
+          <img
+            src="assets/homeless.png"
+            alt="Oakland Homekey story"
+          >
+
+          <div class="project-info">
+
+            <p class="publication">
+              OAKLAND NORTH
+            </p>
+
+            <h3>
+              Oakland Adds Four More Hotel Projects to Growing List
+            </h3>
+
+          </div>
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- =====================================
+       FOOTER
+  ====================================== -->
+
+  <footer>
+
+    <div class="footer-inner">
+
+      <p>
+        Say hi at
+        <a href="mailto:mimiwang@berkeley.edu">
+          mimiwang@berkeley.edu
+        </a>
+      </p>
+
+      <p class="footer-note">
+        Made with a lot of googling and black tea.
+      </p>
+
+    </div>
+
+  </footer>
+
+</body>
+</html>
