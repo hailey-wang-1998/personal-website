@@ -596,3 +596,76 @@ document.addEventListener('DOMContentLoaded', function () {
   );
 
 });
+
+(() => {
+  const grids = document.querySelectorAll(".projects-grid");
+
+  grids.forEach((grid) => {
+    const projects = Array.from(grid.children).filter(
+      (el) => el.classList.contains("project")
+    );
+
+    function layout() {
+      const viewport = window.innerWidth;
+
+      let columns = grid.classList.contains("narratives-grid")
+        ? 4
+        : 5;
+
+      if (viewport <= 1100) columns = 3;
+      if (viewport <= 750) columns = 2;
+      if (viewport <= 450) columns = 1;
+
+      const gapX = viewport <= 750 ? 10 : 15;
+      const gapY = viewport <= 750 ? 10 : 16;
+
+      const width = grid.clientWidth;
+      const columnWidth =
+        (width - gapX * (columns - 1)) / columns;
+
+      const heights = Array(columns).fill(0);
+
+      grid.classList.add("horizontal-masonry");
+
+      projects.forEach((project) => {
+        project.style.width = `${columnWidth}px`;
+      });
+
+      projects.forEach((project, index) => {
+        const column = index % columns;
+
+        project.style.left =
+          `${column * (columnWidth + gapX)}px`;
+
+        project.style.top = `${heights[column]}px`;
+
+        heights[column] += project.offsetHeight + gapY;
+      });
+
+      grid.style.height =
+        `${Math.max(0, ...heights) - (projects.length ? gapY : 0)}px`;
+    }
+
+    let frame;
+
+    function scheduleLayout() {
+      cancelAnimationFrame(frame);
+      frame = requestAnimationFrame(layout);
+    }
+
+    const observer = new ResizeObserver(scheduleLayout);
+
+    projects.forEach((project) => {
+      observer.observe(project);
+    });
+
+    window.addEventListener("resize", scheduleLayout);
+    window.addEventListener("load", scheduleLayout);
+
+    if (document.fonts) {
+      document.fonts.ready.then(scheduleLayout);
+    }
+
+    scheduleLayout();
+  });
+})();

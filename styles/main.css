@@ -1464,3 +1464,25 @@ footer a {
   }
 
 }
+
+.projects-grid.horizontal-masonry {
+  position: relative;
+  column-count: auto;
+  display: block;
+}
+
+.projects-grid.horizontal-masonry > .project {
+  position: absolute;
+  margin: 0;
+}
+
+.narratives-grid .project img {
+  width: 100%;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  object-position: center;
+}
+
+.narratives-grid .project-info {
+  min-height: 78px;
+}
