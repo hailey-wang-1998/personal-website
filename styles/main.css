@@ -1486,3 +1486,27 @@ footer a {
 .narratives-grid .project-info {
   min-height: 78px;
 }
+
+@media (max-width: 750px) {
+  .site-name {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* =====================================
+   CUSTOM CURSOR
+===================================== */
+
+body {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 60 60'%3E%3Cpath d='M8 5 L8 40 L18 30 L28 49 L35 45 L25 26 L43 25 Z' fill='%23e9adb6' stroke='%23303030' stroke-width='2' stroke-linejoin='round'/%3E%3Cpath d='M46 3 Q47 11 55 12 Q47 14 46 22 Q44 14 37 12 Q44 10 46 3Z' fill='%23e1b73c' stroke='%23303030' stroke-width='1'/%3E%3Cpath d='M51 25 Q52 31 57 32 Q52 33 51 39 Q50 33 45 32 Q50 31 51 25Z' fill='%23e1b73c' stroke='%23303030' stroke-width='.8'/%3E%3C/svg%3E") 4 2, auto;
+}
+
+/* Hover over clickable elements */
+
+a,
+button,
+.project,
+.plant-option {
+  cursor: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='28' viewBox='0 0 60 60'%3E%3Cpath d='M36 36 L52 52' stroke='%23303030' stroke-width='10' stroke-linecap='round'/%3E%3Cpath d='M36 36 L52 52' stroke='%23e9adb6' stroke-width='7' stroke-linecap='round'/%3E%3Ccircle cx='24' cy='24' r='18' fill='%23cce6ee' stroke='%23303030' stroke-width='6'/%3E%3Ccircle cx='24' cy='24' r='18' fill='none' stroke='%23e9adb6' stroke-width='3.5'/%3E%3Cpath d='M12 23 Q12 13 23 12' stroke='%23fff8eb' stroke-width='3' stroke-linecap='round' fill='none'/%3E%3C/svg%3E") 11 11, pointer;
+}
